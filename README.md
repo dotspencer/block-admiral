@@ -12,4 +12,4 @@ Paste into `hosts` file and then run:
 node format.js
 ```
 
-Update your computer's host file.
+Add content of `hosts` to your local host file.
