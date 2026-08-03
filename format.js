@@ -7,7 +7,7 @@ const set = new Set(lines);
 const list = Array.from(set);
 list.sort();
 
-const hostsOutput = list.map((domain) => `0.0.0.0 ${domain}`).join('\n');
+const hostsOutput = list.map((domain) => `0.0.0.0     ${domain}`).join('\n');
 fs.writeFileSync('./hosts', hostsOutput);
 
 const listOutput = list.join('\n');
