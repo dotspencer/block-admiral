@@ -1,12 +1,14 @@
 const fs = require('fs');
 
-const hosts = './hosts';
-
-const file = fs.readFileSync(hosts);
-const lines = file.toString().trim().split('\n');
+const listFile = fs.readFileSync('./list.txt');
+const lines = listFile.toString().trim().split('\n');
 
 const set = new Set(lines);
 const list = Array.from(set);
 list.sort();
 
-fs.writeFileSync(hosts, list.join('\n'));
+const hostsOutput = list.map((domain) => `0.0.0.0 ${domain}`).join('\n');
+fs.writeFileSync('./hosts', hostsOutput);
+
+const listOutput = list.join('\n');
+fs.writeFileSync('./list.txt', listOutput);
