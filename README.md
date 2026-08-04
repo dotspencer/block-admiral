@@ -6,7 +6,7 @@ Scrape:
 copy(Array.from(document.querySelectorAll('tr a.link')).map(el => el.innerText).join('\n'));
 ```
 
-Paste into `lists.txt` and run:
+Paste into `./lists/lists.txt` and run:
 
 ```
 bun scripts/format.js
