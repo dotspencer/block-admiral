@@ -9,7 +9,7 @@ copy(Array.from(document.querySelectorAll('tr a.link')).map(el => el.innerText).
 Paste into `lists.txt` and run:
 
 ```
-bun format.js
+bun scripts/format.js
 ```
 
 Add content of `hosts` to your local host file.
